@@ -6,5 +6,17 @@ export class LoadPDF {
     format: 'binary',
     description: 'Arquivo para upload',
   })
-  file: any;
+  file: string;
+}
+
+export class LoadMultiplePDF {
+  @ApiProperty({
+    type: 'array',
+    items: {
+      type: 'string',
+      format: 'binary',
+    },
+    description: 'Arquivos para upload',
+  })
+  files: Array<string>;
 }

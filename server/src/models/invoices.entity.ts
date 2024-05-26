@@ -13,43 +13,43 @@ export class Invoices extends Model<Invoices> {
 
   @Column({
     type: 'FLOAT',
-    allowNull: false,
+    allowNull: true,
   })
   electricityQuantity: number;
 
   @Column({
     type: 'FLOAT',
-    allowNull: false,
+    allowNull: true,
   })
   electricityValue: number;
 
   @Column({
     type: 'FLOAT',
-    allowNull: false,
+    allowNull: true,
   })
   sceeeEnergyQuantity: number;
 
   @Column({
     type: 'FLOAT',
-    allowNull: false,
+    allowNull: true,
   })
   sceeeEnergyValue: number;
 
   @Column({
     type: 'FLOAT',
-    allowNull: false,
+    allowNull: true,
   })
   compensatedEnergyQuantity: number;
 
   @Column({
     type: 'FLOAT',
-    allowNull: false,
+    allowNull: true,
   })
   compensatedEnergyValue: number;
 
   @Column({
     type: 'DECIMAL(10, 2)',
-    allowNull: false,
+    allowNull: true,
   })
   publicContribution: number;
 
@@ -58,6 +58,12 @@ export class Invoices extends Model<Invoices> {
     allowNull: false,
   })
   totalValue: number;
+
+  @Column({
+    type: 'bytea',
+    allowNull: true,
+  })
+  pdfData: Buffer;
 }
 
 export const invoicesProviders = [

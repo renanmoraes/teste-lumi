@@ -1,5 +1,16 @@
 # Teste Lumi
 
+## Author
+Sou Renan, tenho 31 anos e amo desenvolver, tenho bastante experiencias com desenvolvimento de software em varias areas de atuacao, meu hobby favorito e passar tempo com minha esposa (estamos esperando um filho Isaac).
+
+Amo aprender e compartilhar faz parte de minha vida.
+
+Apesar de ser fullstack me dou muito melhor trabalhando com backend, porem tenho experiencias em desenvolvimento web e mobile tambem.
+
+Um das minhas maiores vitorias foi ter que aprender e fazer um site para ranqueamento no google, tive que estudar bastante regras de SEO e colocar em pratica em uma startup de mobilidade urbana, onde disponibilizavamos nossos horarios para usuario que pesquisassem no google `horario de onibus ana rita` e tivemos muito exito por tempo.
+
+No desenvolvimento desse projeto tentei dar meu melhor, tive que aprender a trabalhar com o plugin `pdf-parse` ele e bastante versatil para leituras de PDF em geral.
+
 ## Introduction
 Para o desenvolvimento backend foi utilizado um framework express chamado NestJS na versao `10.3.2`.
 A versao do node e versao `18.18.2` que e uma versao estavel.

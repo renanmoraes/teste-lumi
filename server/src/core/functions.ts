@@ -1,3 +1,3 @@
 export const formatCurrencyValue = (value) => {
-  return parseFloat(value.replace(',', '.'));
+  return parseFloat(value.replace(/\./g, '').replace(',', '.'));
 };
