@@ -1,5 +1,6 @@
 import { ConfigService } from '@nestjs/config';
 import { Sequelize } from 'sequelize-typescript';
+import { Invoices } from 'src/models/invoices.entity';
 
 export const databaseProviders = [
   {
@@ -13,7 +14,7 @@ export const databaseProviders = [
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_NAME'),
       });
-      sequelize.addModels([]);
+      sequelize.addModels([Invoices]);
       await sequelize.sync();
       return sequelize;
     },
