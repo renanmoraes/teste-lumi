@@ -13,9 +13,10 @@ export const databaseProviders = [
         username: configService.get<string>('DB_USER'),
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_NAME'),
+        logging: configService.get<string>('DB_LOGGING') === 'true',
       });
       sequelize.addModels([Invoices]);
-      await sequelize.sync();
+      await sequelize.sync({ alter: true });
       return sequelize;
     },
     inject: [ConfigService],

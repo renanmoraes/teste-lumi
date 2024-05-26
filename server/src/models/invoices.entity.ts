@@ -1,45 +1,48 @@
 import { Table, Column, Model } from 'sequelize-typescript';
 
 @Table
-export class Invoices extends Model {
+export class Invoices extends Model<Invoices> {
   @Column
   numberClient: string;
+
+  @Column
+  numberInstalation: string;
 
   @Column
   monthReference: string;
 
   @Column({
-    type: 'DECIMAL(10, 3)',
+    type: 'FLOAT',
     allowNull: false,
   })
   electricityQuantity: number;
 
   @Column({
-    type: 'DECIMAL(10, 8)',
+    type: 'FLOAT',
     allowNull: false,
   })
   electricityValue: number;
 
   @Column({
-    type: 'DECIMAL(10, 3)',
+    type: 'FLOAT',
     allowNull: false,
   })
   sceeeEnergyQuantity: number;
 
   @Column({
-    type: 'DECIMAL(10, 8)',
+    type: 'FLOAT',
     allowNull: false,
   })
   sceeeEnergyValue: number;
 
   @Column({
-    type: 'DECIMAL(10, 3)',
+    type: 'FLOAT',
     allowNull: false,
   })
   compensatedEnergyQuantity: number;
 
   @Column({
-    type: 'DECIMAL(10, 8)',
+    type: 'FLOAT',
     allowNull: false,
   })
   compensatedEnergyValue: number;
@@ -51,7 +54,7 @@ export class Invoices extends Model {
   publicContribution: number;
 
   @Column({
-    type: 'DECIMAL(10, 8)',
+    type: 'FLOAT',
     allowNull: false,
   })
   totalValue: number;
