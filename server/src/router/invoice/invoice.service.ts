@@ -49,9 +49,9 @@ export class InvoiceService {
     }
 
     if (matchNumberClient) {
-      invoice.numberClient = matchNumberClient[1];
+      invoice.numberClient = matchNumberClient[1].trim();
 
-      invoice.numberInstalation = matchNumberClient[2];
+      invoice.numberInstalation = matchNumberClient[2].trim();
     }
 
     if (matchSCEE) {

@@ -48,7 +48,7 @@ export class Invoices extends Model<Invoices> {
   compensatedEnergyValue: number;
 
   @Column({
-    type: 'DECIMAL(10, 2)',
+    type: 'FLOAT',
     allowNull: true,
   })
   publicContribution: number;
