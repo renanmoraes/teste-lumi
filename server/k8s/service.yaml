@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: teste-lumi
+  namespace: default
+spec:
+  selector:
+    app: teste-lumi
+  type: LoadBalancer
+  ports:
+  - name: teste-lumi
+    protocol: TCP
+    port: 80

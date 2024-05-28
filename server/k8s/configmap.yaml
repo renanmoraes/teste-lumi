@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: teste-lumi-configmap
+  namespace: default
+data:
+  NODE_ENV: "PRODUCTION"
+  PORT: "80"
+  DB_PORT: "5432"
+  DB_USER: root
+  DB_PASSWORD: toor
+  DB_NAME: lumi
+  DB_HOST: "35.230.27.128"
+  DB_LOGGING: "false"

@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teste-lumi
+  namespace: default
+  labels:
+    app: teste-lumi
+spec:
+  selector:
+    matchLabels:
+      app: teste-lumi
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: teste-lumi
+    spec:
+      containers:
+        - name: teste-lumi
+          image: us-west1-docker.pkg.dev/licitem/licitem/teste-lumi:latest
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
+          envFrom:
+            - configMapRef:
+                name: teste-lumi-configmap
+      volumes:
+        - name: config-volume
+          configMap:
+            name: teste-lumi-configmap
+      restartPolicy: Always

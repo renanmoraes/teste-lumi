@@ -1,0 +1,12 @@
+# postgres-service-external.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-external
+spec:
+  type: LoadBalancer  # Ou NodePort
+  ports:
+    - port: 5432
+      targetPort: 5432
+  selector:
+    app: postgres
