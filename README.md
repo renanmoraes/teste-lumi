@@ -55,6 +55,16 @@ Apos esses passos voce podera acessar via navegador `http://localhost:8080/api/s
 
 ### Front
 
+Para o desenvolvimento do frontend eu utilizei um template free. [Horizon UI](https://github.com/horizon-ui/horizon-ui-chakra)
+
+#### Start project
+
+Para iniciar o projeto do basta rodar o comando na pasta `front`
+
+```sh
+ npm run start
+```
+
 ## Database
 
 Para facilitar, estarei disponibilizando um arquivo para iniciar um Docker com a imagem mais recente do Postgres. Para executar, basta executar o comando docker-compose up -d dentro da pasta raiz desse projeto.
